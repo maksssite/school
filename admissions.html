@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admissions - Makindye Secondary School</title>
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header (Same as other pages) -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.png" alt="Makindye SS Logo">
+                <h1>Makindye Secondary School</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="about.html">Academics</a></li>
+                    <li><a href="admissions.html" class="active">Admissions</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Admissions Hero Section -->
+    <section class="admissions-hero">
+        <div class="container">
+            <h2>Join Our Community of Excellence</h2>
+            <p>Begin your educational journey at Makindye Secondary School</p>
+        </div>
+    </section>
+
+    <!-- Admissions Process -->
+    <section class="admissions-process">
+        <div class="container">
+            <h2 class="section-title">Admission Requirements</h2>
+            <div class="requirements-grid">
+                <div class="requirement-card">
+                    <i class="fas fa-file-signature"></i>
+                    <h3>For All Students</h3>
+                    <ul>
+                        <li>Signed School Rules & Regulations (PDF/Image)</li>
+                        <li>Recent Student Photo</li>
+                        <li>Parent/Guardian Contact Information</li>
+                        <li>Birth Certificate/Age Verification</li>
+                    </ul>
+                </div>
+                <div class="requirement-card">
+                    <i class="fas fa-user-graduate"></i>
+                    <h3>Senior One & Five</h3>
+                    <ul>
+                        <li>Recommendation Letter</li>
+                        <li>PLE/UCE Results Slip</li>
+                    </ul>
+                </div>
+                <div class="requirement-card">
+                    <i class="fas fa-school"></i>
+                    <h3>Other Classes</h3>
+                    <ul>
+                        <li>Report from Previous School</li>
+                        <li>Most Recent Term Report</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Form -->
+    <section class="application-form">
+        <div class="container">
+            <h2 class="section-title">Application Form</h2>
+            <form id="admissionForm" enctype="multipart/form-data">
+                <!-- Student Information -->
+                <fieldset>
+                    <legend>Student Information</legend>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="fullName">Full Name*</label>
+                            <input type="text" id="fullName" name="fullName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="dob">Date of Birth*</label>
+                            <input type="date" id="dob" name="dob" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="gender">Gender*</label>
+                            <select id="gender" name="gender" required>
+                                <option value="">Select</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="classApplying">Class Applying For*</label>
+                            <select id="classApplying" name="classApplying" required>
+                                <option value="">Select</option>
+                                <option value="s1">Senior One</option>
+                                <option value="s2">Senior Two</option>
+                                <option value="s3">Senior Three</option>
+                                <option value="s4">Senior Four</option>
+                                <option value="s5">Senior Five</option>
+                                <option value="s6">Senior Six</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="previousSchool">Previous School</label>
+                            <input type="text" id="previousSchool" name="previousSchool">
+                        </div>
+                        <div class="form-group">
+                            <label for="studentPhoto">Student Photo*</label>
+                            <input type="file" id="studentPhoto" name="studentPhoto" accept="image/*" required>
+                        </div>
+                        <div id="photoPreview" class="file-preview"></div>
+                    </div>
+                </fieldset>
+
+                <!-- Parent/Guardian Information -->
+                <fieldset>
+                    <legend>Parent/Guardian Information</legend>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="parentName">Full Name*</label>
+                            <input type="text" id="parentName" name="parentName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="relationship">Relationship*</label>
+                            <select id="relationship" name="relationship" required>
+                                <option value="">Select</option>
+                                <option value="father">Father</option>
+                                <option value="mother">Mother</option>
+                                <option value="guardian">Guardian</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="parentEmail">Email*</label>
+                            <input type="email" id="parentEmail" name="parentEmail" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="parentPhone">Phone Number*</label>
+                            <input type="tel" id="parentPhone" name="parentPhone" required>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="parentAddress">Full Address*</label>
+                            <textarea id="parentAddress" name="parentAddress" rows="3" required></textarea>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <!-- Required Documents -->
+                <fieldset>
+                    <legend>Required Documents</legend>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="rulesDocument">Signed Rules & Regulations* (PDF/Image)</label>
+                            <input type="file" id="rulesDocument" name="rulesDocument" accept=".pdf,.jpg,.jpeg,.png" required>
+                        </div>
+                        <div id="rulesPreview" class="file-preview"></div>
+                        <div class="form-group" id="recommendationField">
+                            <label for="recommendationLetter">Recommendation Letter (S.1 & S.5)</label>
+                            <input type="file" id="recommendationLetter" name="recommendationLetter" accept=".pdf,.jpg,.jpeg,.png">
+                        </div>
+                        <div id="recommendationPreview" class="file-preview"></div>
+                        <div class="form-group" id="reportField">
+                            <label for="schoolReport">Previous School Report (Other Classes)</label>
+                            <input type="file" id="schoolReport" name="schoolReport" accept=".pdf,.jpg,.jpeg,.png">
+                        </div>
+                        <div id="reportPreview" class="file-preview"></div>
+                        <div class="form-group">
+                            <label for="resultsSlip">PLE/UCE Results Slip (Where Applicable)</label>
+                            <input type="file" id="resultsSlip" name="resultsSlip" accept=".pdf,.jpg,.jpeg,.png">
+                        </div>
+                        <div id="resultsPreview" class="file-preview"></div>
+                    </div>
+                </fieldset>
+
+                <!-- Declaration -->
+                <fieldset class="declaration">
+                    <legend>Declaration</legend>
+                    <div class="form-group">
+                        <input type="checkbox" id="declaration" name="declaration" required>
+                        <label for="declaration">I hereby declare that all information provided is accurate and complete. I agree to abide by the rules and regulations of Makindye Secondary School.*</label>
+                    </div>
+                </fieldset>
+
+                <button type="submit" class="btn">Submit Application</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer (Same as other pages) -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3 id="contact">Contact Us</h3>
+              <p><i class="fas fa-map-marker-alt"></i> 7HFJ+XPF, Salaama Rd, Kampala</p>
+                    <p><i class="fas fa-phone"></i> +256782 408181/0782 408181</p>
+                    <p><i class="fas fa-envelope"></i> makindyesecondaryschool@gmail.com</p>
+                    <p>
+                        <i class="fas fa-envelope">
+                            P.O.Box 30143, Kampala-Uganda
+                        </i>
+                    </p>       
+                </div>
+                <div class="footer-col">
+                    <h3>Admissions Office</h3>
+                    <p>Open Monday-Friday</p>
+                    <p>8:00am - 5:00pm</p>
+                    <p>Saturday 9:00am - 1:00pm</p>
+                </div>
+               <div class="footer-col">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/makindyess/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.youtube.com/c/MukasaIbraart"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Makindye Secondary School. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/admissions.js"></script>
+</body>
+</html>
+<!-- After each file input, add: -->
+
+
+
